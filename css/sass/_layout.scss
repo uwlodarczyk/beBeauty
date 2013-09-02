@@ -1,0 +1,48 @@
+/*LAYOUT - DESKTOP
+------------------------------------------------*/
+
+body {
+	margin: 0 auto;
+    background-color: $background;
+}
+
+
+
+
+.masthead {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10%;
+	background-color: $background-masthead;
+    .lang {
+    	float: right;
+    	ul {
+    		list-style: none;
+    		li {
+    		width: 3.5em;
+    		height:2.5em;    			
+    		display: inline-block;
+    		text-indent: -9999px;
+    		white-space: nowrap;
+    		}
+    		.pl {
+    			background: transparent url("#{$path}/img/icons.png") -98px 0px no-repeat;
+    		}    		
+    	}
+    }
+	header {
+		width: 85%;	
+		margin: 0 auto;	
+		h1 {
+			padding-bottom: 1em;
+		}
+		h3 {
+			padding-left: 2em;
+    		background: url(/img/icons.png) 0px 0px;			
+		}
+		.logo {
+			width: 10em;
+			float: right;
+		}
+	}
+}

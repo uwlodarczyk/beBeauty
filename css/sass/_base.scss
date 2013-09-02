@@ -1,0 +1,93 @@
+$path: "http://localhost:8888/bebeauty";
+
+/*VARIABLES - FONTS
+------------------------------------------------*/
+$font-base: 16px;
+$font-base-line-height: 24px;
+
+
+/*VARIABLES - COLOR
+------------------------------------------------*/
+$background: #ffffff;
+$background-masthead: #eaeaea;
+
+$font-color: #000000;
+$font-color-title: #dbdbdb;
+$font-color-subtitle: #8e8e8e;
+$font-base-line-height-half: $font-base-line-height / 2;
+$font-base-percentage: (($font-base / 16px) * 100) + 0%;
+
+
+/*MIXINS
+------------------------------------------------*/
+@mixin heading($size) {
+	font-size: em($size);
+	/* line-height: heading-line-height($size); */
+	margin-bottom: em($font-base-line-height-half, $size);
+}
+
+
+
+
+
+
+
+
+
+/*FUNCTIONS
+------------------------------------------------*/
+@function em($target, $context: $font-base) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+@function perc($width, $container-width: $max-width) {
+	@return percentage($width / $container-width);
+}
+
+@function lh($amount: 1, $context: $font-base) {
+	@return em($font-base-line-height * $amount, $context);
+}
+
+@function heading-line-height($size) {
+	
+	$line-height: $font-base-line-height;
+	
+	$match: false;
+	@while $match != true {
+		
+		@if $size == $line-height {
+			$match: true;
+		} @else if  $size < $line-height {
+			$match: true;
+		} @else if $size > $line-height {
+			$line-height: $line-height + $font-base-line-height;
+		} @else {
+			$match: true;
+		}
+		
+	} 
+
+	@return ($line-height / $size) + 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

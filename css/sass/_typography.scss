@@ -1,0 +1,53 @@
+/*=BASE
+------------------------------------------------*/
+html {
+	-webkit-font-smoothing: antialiased;
+}			
+body { 
+  color: $font-color;
+  font-family: 'Chivo', sans-serif;
+  font-size: $font-base-percentage;
+  line-height: em($font-base-line-height);
+}
+
+/*=HEADINGS
+------------------------------------------------*/
+h1				  { @include heading(106px); }
+h2			  	  { @include heading(32px); }
+h3 				  { @include heading(24px); }
+h4 				  { @include heading(15px); }
+h5 				  { @include heading(15px); }
+h6 				  { @include heading(15px); }
+
+
+
+
+h1 {
+	font-family: 'Scada', sans-serif, arial;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	line-height: 1em;	
+	text-transform: uppercase;
+	color: $font-color-title;
+
+
+}
+
+h1, h2, h3 {
+	width: 40%;
+	margin: 0 auto;	
+}
+h2, h3 {
+	color: $font-color-subtitle;
+	line-height: 1.25em;		
+	
+
+}
+h2 {
+	font-family: 'Ubuntu', sans-serif, arial;
+	font-weight:700;
+}
+h3 {
+	font-family: 'Ubuntu', sans-serif, arial;
+	font-weight:400;
+}
