@@ -10,8 +10,11 @@ $font-base-line-height: 24px;
 ------------------------------------------------*/
 $background: #ffffff;
 $background-masthead: #eaeaea;
+$background-article-hightlighted: #bfe2fe;
+$background-headline: #d5d5d5;
+$background-footer: #e2b800;
 
-$font-color: #000000;
+$font-color: #4d4d4d;
 $font-color-title: #dbdbdb;
 $font-color-subtitle: #8e8e8e;
 $font-base-line-height-half: $font-base-line-height / 2;
@@ -25,11 +28,6 @@ $font-base-percentage: (($font-base / 16px) * 100) + 0%;
 	/* line-height: heading-line-height($size); */
 	margin-bottom: em($font-base-line-height-half, $size);
 }
-
-
-
-
-
 
 
 

@@ -468,10 +468,13 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  color: black;
-  font-family: 'Chivo', sans-serif;
+  color: #4d4d4d;
+  font-family: 'Puritan', Arial, sans-serif;
+  font-weight: 400;
   font-size: 100%;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 /*=HEADINGS
 ------------------------------------------------*/
@@ -485,49 +488,54 @@ h2 {
   /* line-height: heading-line-height($size); */
   margin-bottom: 0.375em; }
 
-h3 {
+h3, h4 {
   font-size: 1.5em;
   /* line-height: heading-line-height($size); */
   margin-bottom: 0.5em; }
 
-h4 {
-  font-size: 0.9375em;
-  /* line-height: heading-line-height($size); */
-  margin-bottom: 0.8em; }
-
 h5 {
-  font-size: 0.9375em;
+  font-size: 1.375em;
   /* line-height: heading-line-height($size); */
-  margin-bottom: 0.8em; }
+  margin-bottom: 0.54545em; }
 
 h6 {
-  font-size: 0.9375em;
+  font-size: 1.25em;
   /* line-height: heading-line-height($size); */
-  margin-bottom: 0.8em; }
+  margin-bottom: 0.6em; }
 
 h1 {
-  font-family: 'Scada', sans-serif, arial;
+  font-family: 'Scada', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1em;
   text-transform: uppercase;
   color: #dbdbdb; }
 
-h1, h2, h3 {
-  width: 40%;
-  margin: 0 auto; }
-
-h2, h3 {
+.masthead header h2, .masthead header h3, .masthead header h4 {
   color: #8e8e8e;
   line-height: 1.25em; }
 
 h2 {
-  font-family: 'Ubuntu', sans-serif, arial;
+  font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 700; }
 
-h3 {
-  font-family: 'Ubuntu', sans-serif, arial;
+h3, h4 {
+  font-family: 'Ubuntu', Arial, sans-serif;
   font-weight: 400; }
+
+h6 {
+  line-height: 1.5em;
+  font-weight: 400; }
+  h6 span {
+    font-weight: 700;
+    font-style: italic; }
+
+h5 {
+  font-weight: 400;
+  color: #e2b800; }
+  h5 span {
+    font-weight: 700;
+    text-transform: uppercase; }
 
 /*LAYOUT - DESKTOP
 ------------------------------------------------*/
@@ -538,8 +546,8 @@ body {
 .masthead {
   width: 100%;
   margin: 0 auto;
-  padding-top: 10%;
-  background-color: #eaeaea; }
+  padding-top: 5%;
+  background: #eaeaea url("http://localhost:8888/bebeauty/img/face.png") no-repeat 83% 89%; }
   .masthead .lang {
     float: right; }
     .masthead .lang ul {
@@ -548,18 +556,182 @@ body {
         width: 3.5em;
         height: 2.5em;
         display: inline-block;
-        text-indent: -9999px;
-        white-space: nowrap; }
-      .masthead .lang ul .pl {
-        background: transparent url("http://localhost:8888/bebeauty/img/icons.png") -98px 0px no-repeat; }
+        opacity: 0.7;
+        outline: none; }
+      .masthead .lang ul :hover {
+        outline: none;
+        opacity: 1; }
   .masthead header {
     width: 85%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
     .masthead header h1 {
-      padding-bottom: 1em; }
-    .masthead header h3 {
-      padding-left: 2em;
-      background: url(/img/icons.png) 0px 0px; }
-    .masthead header .logo {
-      width: 10em;
-      float: right; }
+      padding-bottom: 0.75em; }
+    .masthead header h1, .masthead header h2, .masthead header h3, .masthead header h4 {
+      width: 70%;
+      margin: 0 auto; }
+    .masthead header h4 {
+      padding: 0 0 4.5em 0;
+      background: none; }
+    .masthead header h4:before {
+      width: 1.5em;
+      height: 1.1em;
+      display: inline-block;
+      content: url("http://localhost:8888/bebeauty/img/mobile-icon.png"); }
+  .masthead .logo {
+    position: fixed;
+    top: 30em;
+    right: 2%;
+    cursor: pointer; }
+
+.promo h5 {
+  float: right;
+  width: 52%;
+  background: white;
+  border-top-left-radius: 1.25em;
+  border-bottom-left-radius: 1.25em;
+  padding: 0.5em 0 0.5em 1em;
+  margin: -2.1em 0 0; }
+
+.social {
+  margin: 0 auto;
+  background-color: #eaeaea; }
+  .social article {
+    width: 60%;
+    padding-left: 0; }
+
+.social-media ul {
+  width: 50%;
+  margin: 0 auto 1.5em;
+  padding-left: 0;
+  list-style: none;
+  display: inline-block; }
+  .social-media ul li {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.38em;
+    margin: 2em 0.9em;
+    text-indent: -99999px;
+    background: url("http://localhost:8888/bebeauty/img/social-round-grey.png") no-repeat;
+    opacity: 0.7;
+    cursor: pointer; }
+  .social-media ul :hover {
+    opacity: 1; }
+  .social-media ul li.fb {
+    background-position: -7em 0; }
+  .social-media ul li.gmail {
+    background-position: -3.5em 0;
+    margin-left: 0; }
+  .social-media ul li.twitter {
+    background-position: 0 0; }
+  .social-media ul li.google {
+    background-position: -10.5em 0; }
+.social-media .share {
+  display: inline-block;
+  margin-top: 3.5em; }
+
+.highlights {
+  background: #bfe2fe;
+  padding: 1em 0; }
+  .highlights h4 {
+    background: #91cdff;
+    color: #fff;
+    padding: 0.47em;
+    margin: -1em auto 0 2.4em; }
+  .highlights .title {
+    margin: 4em 0 0 20%;
+    background: transparent url("http://localhost:8888/bebeauty/img/m-blue.png") no-repeat 0 0; }
+
+h4 {
+  background: #d5d5d5;
+  color: #fff;
+  padding: 0.46em;
+  margin: -1em auto 0 2.3em; }
+
+.title {
+  margin: 5em 0 0 20%;
+  background: transparent url("http://localhost:8888/bebeauty/img/m-grey.png") no-repeat 0 0; }
+
+em {
+  font-weight: 700;
+  font-style: italic; }
+
+p {
+  margin: 2em 0; }
+
+article {
+  text-align: left;
+  width: 55%;
+  margin: 0 auto;
+  padding-left: 6%; }
+
+.treatments {
+  padding-top: 3em; }
+  .treatments h6, .treatments p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em; }
+
+.products {
+  background: url("http://localhost:8888/bebeauty/img/strap.jpg") repeat-x 0 0;
+  height: 27em;
+  width: 100%;
+  margin-top: 10em; }
+  .products article {
+    background: url("http://localhost:8888/bebeauty/img/products.png") no-repeat 40% 37%;
+    height: 20em;
+    width: 92%; }
+
+.company {
+  margin-top: -10em;
+  background: #565353; }
+  .company a {
+    text-decoration: none;
+    color: #fff; }
+    .company a :hover {
+      text-decoration: none;
+      color: #fff; }
+  .company p {
+    color: #fff;
+    background: url("http://localhost:8888/bebeauty/img/bcn-logo.jpg") no-repeat 65% 104%;
+    padding-top: 5.2em;
+    margin-left: 2em; }
+
+footer {
+  background: #e2b800;
+  position: relative;
+  margin-top: -0.75em;
+  padding-bottom: 2em; }
+  footer article {
+    padding-left: 0;
+    width: 60%;
+    text-align: center; }
+    footer article .address, footer article .hours, footer article .social-media {
+      display: inline-block;
+      width: 25%;
+      text-align: left; }
+      footer article .address p, footer article .hours p, footer article .social-media p {
+        padding: 0;
+        margin: 0;
+        font-weight: 700; }
+    footer article .social-media {
+      width: 48%;
+      float: right;
+      margin-top: 4.5%;
+      margin-right: -11em; }
+    footer article ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    footer article .address {
+      margin-top: -2em; }
+    footer article .hours {
+      padding-top: 2.5em; }
+    footer article .social-media li {
+      margin: 0.5em 0;
+      opacity: 0.7; }
+    footer article .copyright {
+      position: absolute;
+      bottom: 1em;
+      right: 5em; }

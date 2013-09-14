@@ -7,13 +7,11 @@ body {
 }
 
 
-
-
 .masthead {
 	width: 100%;
 	margin: 0 auto;
-	padding-top: 10%;
-	background-color: $background-masthead;
+	padding-top: 5%;
+	background: $background-masthead url("#{$path}/img/face.png") no-repeat 83% 89%;
     .lang {
     	float: right;
     	ul {
@@ -22,27 +20,226 @@ body {
     		width: 3.5em;
     		height:2.5em;    			
     		display: inline-block;
-    		text-indent: -9999px;
-    		white-space: nowrap;
-    		}
-    		.pl {
-    			background: transparent url("#{$path}/img/icons.png") -98px 0px no-repeat;
-    		}    		
+    		opacity:0.7;
+    		outline: none;
+    		}  
+    		:hover {
+             outline: none;
+             opacity: 1;
+    		}  			  		
     	}
     }
 	header {
 		width: 85%;	
 		margin: 0 auto;	
+		position: relative;
 		h1 {
-			padding-bottom: 1em;
+			padding-bottom: 0.75em;
 		}
-		h3 {
-			padding-left: 2em;
-    		background: url(/img/icons.png) 0px 0px;			
+		h1, h2, h3, h4 {
+			width: 70%;
+			margin: 0 auto;	
 		}
-		.logo {
-			width: 10em;
-			float: right;
+		h4 {
+			padding: 0 0 4.5em 0;
+  	        background: none;		
+		}
+		h4:before {
+			width: 1.5em;
+			height: 1.1em;
+			display: inline-block;
+    		content: url("#{$path}/img/mobile-icon.png");			
 		}
 	}
+	.logo {
+        position: fixed;
+        top: 30em;
+        right: 2%;
+        cursor: pointer;
+	}	
+}
+.promo {
+	h5 {
+		float:right;
+		width: 52%;
+		background: $background;
+		border-top-left-radius: 1.25em;
+		border-bottom-left-radius: 1.25em;
+		padding: 0.5em 0 0.5em 1em;
+		margin: -2.1em 0 0;		
+		}
+}
+.social {
+	margin: 0 auto;
+	background-color:$background-masthead;
+	article {
+		width: 60%;
+        padding-left: 0;
+	}	
+}
+.social-media {
+		ul {
+			width: 50%;
+			margin: 0 auto 1.5em;
+			padding-left: 0;
+			list-style: none;
+			display: inline-block;
+			li {
+				display: inline-block;
+				width: 2.5em;
+				height: 2.38em;
+				margin: 2em 0.9em;
+				text-indent: -99999px;
+				background: url("#{$path}/img/social-round-grey.png") no-repeat;
+				opacity:0.7;
+				cursor: pointer;
+			}
+			:hover {
+				opacity:1;
+			}			
+			li.fb {
+				background-position: -7em 0;
+			}
+			li.gmail {
+				background-position: -3.5em 0;
+				margin-left: 0;
+			}
+			li.twitter{
+				background-position: 0 0;
+			}
+			li.google{
+				background-position: -10.5em 0;
+			}
+
+		}
+		.share { 
+			display: inline-block;
+			margin-top: 3.5em;
+		}
+}
+
+
+.highlights {
+	background:$background-article-hightlighted;
+	padding: 1em 0;
+	h4 {
+		background: #91cdff;
+		color: #fff;
+		padding: 0.47em;
+		margin: -1em auto 0 2.4em;
+	}
+	.title {
+		margin: 4em 0 0 20%;
+		background: transparent url("http://localhost:8888/bebeauty/img/m-blue.png") no-repeat 0 0;
+	}
+
+}
+h4 {
+	background: #d5d5d5;
+	color: #fff;
+	padding: 0.46em;
+	margin: -1em auto 0 2.3em;
+}
+.title {
+	margin: 5em 0 0 20%;
+	background: transparent url("http://localhost:8888/bebeauty/img/m-grey.png") no-repeat 0 0;
+}
+em {
+	font-weight: 700;
+	font-style: italic;
+}
+p {
+	margin: 2em 0;
+}
+article {
+    text-align: left;
+    width: 55%;
+    margin: 0 auto;
+    padding-left:6%;
+}
+.treatments {
+	padding-top: 3em;
+	h6, p {
+		display:inline-block;
+		margin: 0;
+		padding: 0;
+		line-height: 1.5em;
+	}
+}
+.products {
+	background: url("http://localhost:8888/bebeauty/img/strap.jpg") repeat-x 0 0;
+	height: 27em;
+	width: 100%;
+	margin-top: 10em;
+	article {
+	background: url("http://localhost:8888/bebeauty/img/products.png") no-repeat 40% 37%;
+	height: 20em;
+	width: 92%;		
+	}
+}
+.company {
+    margin-top: -10em;
+    background: #565353;
+    a {
+    	text-decoration: none;
+    	color: #fff;
+    :hover {
+     	text-decoration: none;
+    	color: #fff;   	
+        }
+    }
+   p {
+   	color: #fff;
+	background: url("http://localhost:8888/bebeauty/img/bcn-logo.jpg") no-repeat 65% 104%;
+	padding-top: 5.2em;
+    margin-left: 2em;
+   }	
+}
+footer {
+	background:$background-footer;
+	position:relative;
+	margin-top: -0.75em;
+	padding-bottom: 2em;
+	article {
+		padding-left: 0;
+		width: 60%;
+		text-align: center;
+	.address, .hours, .social-media {
+		display: inline-block;
+		width: 25%;
+		text-align: left;
+		p {
+			padding: 0;
+			margin: 0;
+			font-weight: 700;
+		}
+	}
+    .social-media {
+    	width: 48%;
+    	float: right;
+        margin-top: 4.5%;
+		margin-right: -11em;
+     }	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.address {
+       margin-top: -2em;
+	}
+	.hours {
+		padding-top: 2.5em;
+	}
+	.social-media li {
+		margin: 0.5em 0;
+		opacity:0.7;
+	}
+	.copyright {
+		position:absolute;
+		bottom: 1em;
+		right: 5em;
+
+	}
+    }
 }
